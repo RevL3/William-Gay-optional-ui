@@ -1,0 +1,136 @@
+h1{
+    color: white;
+    font-family: "Archivo Black", sans-serif;
+    /* text-shadow: 
+    1px 1px rgb(219, 219, 219), 
+    1.5px 1.5px rgb(218, 218, 218),
+    2px 2px rgb(216, 216, 216),
+    2.5px 2.5px rgb(209, 209, 209),
+    3px 3px rgb(194, 192, 192),
+    3.5px 3.5px rgb(184, 183, 183),
+    3.5px 4px 5px rgb(73, 73, 73); */
+    font-size: 100px; 
+    animation: shadow 2s linear 1 normal forwards, move 2s ease-in 1 normal forwards;
+    animation-delay: 1s;
+    
+    
+    /* -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(148, 148, 148); */
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes shadow{
+    from{
+        text-shadow: 
+        0px 0px rgb(255, 255, 255), 
+        0px 0px rgb(255, 255, 255),
+        0px 0px rgb(255, 255, 255),
+        0px 0px rgb(255, 255, 255),
+        0px 0px rgb(255, 255, 255),
+        0px 0px rgb(255, 255, 255),
+        0px 0px rgb(255, 255, 255),
+        0px 0px rgb(255, 255, 255),
+        0px 0px rgb(255, 255, 255),
+        0px 0px rgb(255, 255, 255),
+        0px 0px rgb(255, 255, 255),
+        0px 0px 4px rgb(255, 255, 255, 0);
+        
+    } to{
+        text-shadow: 
+        1px 1px rgb(219, 219, 219), 
+        1.5px 1.5px rgb(218, 218, 218),
+        2px 2px rgb(216, 216, 216),
+        2.5px 2.5px rgb(209, 209, 209),
+        3px 3px rgb(194, 192, 192),
+        3.5px 3.5px rgb(184, 183, 183),
+        4px 4px rgb(184, 183, 183),
+        4.5px 4.5px rgb(184, 183, 183),
+        5px 5px rgb(184, 183, 183),
+        5.5px 5.5px  rgb(184, 183, 183),
+        6px 6px  rgb(184, 183, 183),
+        6px 6.5px 5px rgb(88, 88, 88);      
+    }
+}
+
+body{
+    animation: color-change 2s ease-in 1 normal forwards;
+    animation-delay: 2s;
+}
+
+@keyframes color-change{
+    from{
+        background-color: white;
+    } to{
+        background-color: rgb(167, 167, 167);
+    }
+}
+
+@keyframes move {
+    100%{
+        transform: translate(-7px, -7px);
+    }
+}
+
+.alien{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width:200px;
+  
+    background:  rgb(82, 168, 82);  
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50% 100%;
+    border-bottom-right-radius: 8%;
+    border-bottom-left-radius: 100% 50%;
+    transform: rotate(45deg);
+    padding: 10px;
+    
+}
+
+.login{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    transform: rotate(-45deg);
+    justify-content: center;
+    animation: fade-in 3s ease-in 1 normal forwards;
+    animation-delay: 2s;
+    opacity:0;
+}
+
+@keyframes fade-in{
+    100%{
+        opacity: 100%;
+    }
+}
+input{
+    background-color: black;
+    flex:2; 
+    border: none;
+    color: greenyellow;  
+    text-align: center;   
+}
+
+::placeholder{
+    text-align: center;
+    color: greenyellow;
+}
+button{
+    background-color: red;
+    border: none;
+    border-radius: 50%;
+    flex:1;
+}
+
+button:focus{
+    outline: none;
+    box-shadow: 0px 0px 3px 50% red;
+}
